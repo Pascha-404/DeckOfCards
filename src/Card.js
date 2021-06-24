@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import "./Card.css"
 
 class Card extends Component{
+    
     render() {
-        return <h2>This is a card</h2>
+        const { image, idx, name, rotating, posX } = this.props;
+        return <img src={image} alt={name} style={{ zIndex: idx, transform: `translateX(-${posX}%) rotate(${rotating}deg)` }} />
     }
 }
 
